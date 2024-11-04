@@ -1,17 +1,25 @@
-import React from "react";
-
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import HomeCards from "./components/HomeCards";
+import JobListings from "./components/JobListings";
 const App = () => {
-  const myName = "Kutman";
-  const friends = ["Rizqon", "Chika", "Beka", "Esio"];
   return (
     <>
-      <div className="text-5xl">App</div>
-      <p className="text-5xl">Amangeldiev {myName}</p>
-      <ul>
-        {friends.map((friend, index) => (
-          <li key={index}>{friend}</li>
-        ))}
-      </ul>
+      <Navbar />
+      <Hero
+        title="Become a Frontend Developer"
+        subTitle="Find the React job that fits your skills and needs"
+      />
+      <HomeCards />
+      <JobListings />
+      <section className="m-auto max-w-lg my-10 px-6">
+        <a
+          href="jobs.html"
+          className="block bg-black text-white text-center py-4 px-6 rounded-xl hover:bg-gray-700"
+        >
+          View All Jobs
+        </a>
+      </section>
     </>
   );
 };
